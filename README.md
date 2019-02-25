@@ -1,4 +1,4 @@
-# FCCDB_sync
+# FCCDB
 
 Pull FCC data from https://wireless.fcc.gov to Onevizion and keep it in sync
 
@@ -29,16 +29,11 @@ Add new trackors to Trackor Tree.
 	Registration -> FCC Special Conditions
 ```
 
-Set import parameters at new Imports.
+Setup import parameters at new Imports.
 
-Add a new integration with following fields on Integration page.
-- Integration Name: FCCDB
-- Command: ./import-run.sh
-- Repository URL: https://github.com/IKAMTeam/FCCDBintHub
-- Schedule: 0 0 3 * * ?
-- Settings File: SettingsFile.integration 
-- Enabled: On
-
+- Add a new integration on Integration page using repository URL: https://github.com/IKAMTeam/FCCDBintHub
+- Recommended schedule for daily sync is 0 0 3 * * ?
+- Specify instllation url and credentials in SettingsFile.integration 
 
 SettingsFile.integration:
 ```
