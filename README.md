@@ -31,7 +31,7 @@ Add new trackors to Trackor Tree.
 
 Setup import parameters at new Imports.
 
-- Add a new integration on Integration page using repository URL: https://github.com/IKAMTeam/FCCDBintHub
+- Add a new integration on Integration page using repository URL: https://github.com/ov-integrations/FCCDB
 - Recommended schedule for daily sync is 0 0 3 * * ?
 - Specify instllation url and credentials in SettingsFile.integration 
 
