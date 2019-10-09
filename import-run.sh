@@ -6,7 +6,7 @@ SCRIPT_DIR="$(realpath "$(dirname "$0")")"
 source "$SCRIPT_DIR/config.sh"
 
 # Check URL set exists
-DL_SET_NAME=$(get_property $SCRIPT_DIR"/SettingsFile.integration" "SET")
+DL_SET_NAME=$(get_property $SCRIPT_DIR"/settings" "SET")
 DL_SET="${DL_SETS[$DL_SET_NAME]}"
 
 if [ "$DL_SET" == "" ]
@@ -18,8 +18,8 @@ fi
 
 IFS=' ' read -r -a DL_SET_URL_NAMES <<< "${DL_SETS[$DL_SET_NAME]}"
 
-API_UN=$(get_property $SCRIPT_DIR"/SettingsFile.integration" "UN")
-API_PW=$(get_property $SCRIPT_DIR"/SettingsFile.integration" "PWD")
+API_UN=$(get_property $SCRIPT_DIR"/settings" "UN")
+API_PW=$(get_property $SCRIPT_DIR"/settings" "PWD")
 
 ####################################################
 DL_SET_PATH="$DL_PATH/$DL_SET_NAME"
