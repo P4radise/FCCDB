@@ -1,1 +1,4 @@
 command = ./import-run.sh
+settings_file_name = settings
+default_schedule = 0 0 0 * * ?
+read_from_stdout = false

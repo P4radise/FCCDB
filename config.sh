@@ -42,7 +42,7 @@ function get_import_id(){
     echo $RES
 }
 
-export ENDPOINT_URL=$(get_property $SCRIPT_DIR"/SettingsFile.integration" "URL")
+export ENDPOINT_URL=$(get_property $SCRIPT_DIR"/settings" "URL")
 export DL_PATH="$(realpath "$SCRIPT_DIR/tmp")"
 export SDEL="|"
 export TDEL=","
@@ -53,11 +53,11 @@ export WGET_DOWNLOAD_RETRIES="30"
 export IMPORT_CURL_RETRIES="20"
 export WAIT_SEC_BEFORE_NEXT_RETRY="300"
 export DAT_CELLS_PER_FILE="5000000"
-export LOG_URL=$(get_property $SCRIPT_DIR"/SettingsFile.integration" "URL")
+export LOG_URL=$(get_property $SCRIPT_DIR"/settings" "URL")
 export IHUB_PROCESS=$(cat "$SCRIPT_DIR/ihub_process_id")
 
-export API_UN=$(get_property $SCRIPT_DIR"/SettingsFile.integration" "UN")
-export API_PW=$(get_property $SCRIPT_DIR"/SettingsFile.integration" "PWD")
+export API_UN=$(get_property $SCRIPT_DIR"/settings" "UN")
+export API_PW=$(get_property $SCRIPT_DIR"/settings" "PWD")
 
 typeset -A IMP_IDS
 IMP_IDS=(
