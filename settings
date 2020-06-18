@@ -1,4 +1,13 @@
 SET=daily
-UN=
+USERNAME=
 PWD=
 URL=
+FULL=ftp://wirelessftp.fcc.gov/pub/uls/complete/r_tower.zip
+SUN=ftp://wirelessftp.fcc.gov/pub/uls/daily/r_tow_sun.zip
+MON=ftp://wirelessftp.fcc.gov/pub/uls/daily/r_tow_mon.zip
+TUE=ftp://wirelessftp.fcc.gov/pub/uls/daily/r_tow_tue.zip
+WED=ftp://wirelessftp.fcc.gov/pub/uls/daily/r_tow_wed.zip
+THU=ftp://wirelessftp.fcc.gov/pub/uls/daily/r_tow_thu.zip
+FRI=ftp://wirelessftp.fcc.gov/pub/uls/daily/r_tow_fri.zip
+SAT=ftp://wirelessftp.fcc.gov/pub/uls/daily/r_tow_sat.zip
+

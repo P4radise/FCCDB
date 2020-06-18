@@ -18,7 +18,7 @@ fi
 
 IFS=' ' read -r -a DL_SET_URL_NAMES <<< "${DL_SETS[$DL_SET_NAME]}"
 
-API_UN=$(get_property $SCRIPT_DIR"/settings" "UN")
+API_UN=$(get_property $SCRIPT_DIR"/settings" "USERNAME")
 API_PW=$(get_property $SCRIPT_DIR"/settings" "PWD")
 
 ####################################################

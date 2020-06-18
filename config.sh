@@ -56,7 +56,7 @@ export DAT_CELLS_PER_FILE="5000000"
 export LOG_URL=$(get_property $SCRIPT_DIR"/settings" "URL")
 export IHUB_PROCESS=$(cat "$SCRIPT_DIR/ihub_process_id")
 
-export API_UN=$(get_property $SCRIPT_DIR"/settings" "UN")
+export API_UN=$(get_property $SCRIPT_DIR"/settings" "USERNAME")
 export API_PW=$(get_property $SCRIPT_DIR"/settings" "PWD")
 
 typeset -A IMP_IDS
@@ -125,7 +125,7 @@ esac
 typeset -A DL_SETS
 DL_SETS=(
     [full]="full_r"
-    [daily]="daily_r"
+    [daily]="daily_r_$DAY_NAME"
     [daily_sun]="daily_r_sun"
     [daily_mon]="daily_r_mon"
     [daily_tue]="daily_r_tue"
@@ -137,13 +137,12 @@ DL_SETS=(
 
 typeset -A DL_URLS
 DL_URLS=(
-    [full_r]="https://wireless.fcc.gov/uls/data/complete/r_tower.zip"
-    [daily_r]="https://wireless.fcc.gov/uls/data/daily/r_tow_$DAY_NAME.zip"
-    [daily_r_sun]="https://wireless.fcc.gov/uls/data/daily/r_tow_sun.zip"
-    [daily_r_mon]="https://wireless.fcc.gov/uls/data/daily/r_tow_mon.zip"
-    [daily_r_tue]="https://wireless.fcc.gov/uls/data/daily/r_tow_tue.zip"
-    [daily_r_wed]="https://wireless.fcc.gov/uls/data/daily/r_tow_wed.zip"
-    [daily_r_thu]="https://wireless.fcc.gov/uls/data/daily/r_tow_thu.zip"
-    [daily_r_fri]="https://wireless.fcc.gov/uls/data/daily/r_tow_fri.zip"
-    [daily_r_sat]="https://wireless.fcc.gov/uls/data/daily/r_tow_sat.zip"
+    [full_r]=$(get_property $SCRIPT_DIR"/settings" "FULL")
+    [daily_r_sun]=$(get_property $SCRIPT_DIR"/settings" "SUN")
+    [daily_r_mon]=$(get_property $SCRIPT_DIR"/settings" "MON")
+    [daily_r_tue]=$(get_property $SCRIPT_DIR"/settings" "TUE")
+    [daily_r_wed]=$(get_property $SCRIPT_DIR"/settings" "WED")
+    [daily_r_thu]=$(get_property $SCRIPT_DIR"/settings" "THU")
+    [daily_r_fri]=$(get_property $SCRIPT_DIR"/settings" "FRI")
+    [daily_r_sat]=$(get_property $SCRIPT_DIR"/settings" "SAT")
 )

@@ -33,18 +33,27 @@ Setup import parameters at new Imports.
 
 - Add a new integration on Integration page using repository URL: https://github.com/ov-integrations/FCCDB
 - Recommended schedule for daily sync is 0 0 3 * * ?
-- Specify instllation url and credentials in SettingsFile.integration 
+- Specify installation url and credentials in settings 
 
-SettingsFile.integration:
+settings:
 ```
 SET=daily
-UN=username
+USERNAME=username
 PWD=password
 URL=https://name.onevizion.com
+FULL=ftp://wirelessftp.fcc.gov/pub/uls/complete/r_tower.zip
+SUN=ftp://wirelessftp.fcc.gov/pub/uls/daily/r_tow_sun.zip
+MON=ftp://wirelessftp.fcc.gov/pub/uls/daily/r_tow_mon.zip
+TUE=ftp://wirelessftp.fcc.gov/pub/uls/daily/r_tow_tue.zip
+WED=ftp://wirelessftp.fcc.gov/pub/uls/daily/r_tow_wed.zip
+THU=ftp://wirelessftp.fcc.gov/pub/uls/daily/r_tow_thu.zip
+FRI=ftp://wirelessftp.fcc.gov/pub/uls/daily/r_tow_fri.zip
+SAT=ftp://wirelessftp.fcc.gov/pub/uls/daily/r_tow_sat.zip
 ```
 
 - SET is type of the integration.
-- UN - API user name
+- USERNAME - API user name
 - PWD - API password
+- FULL, SUN, MON, TUE, WED, THU, FRI, SAT - URLs of the databases
 
 Set “full” instead of “daily” for Full import.
