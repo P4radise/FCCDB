@@ -25,3 +25,4 @@ select count(*)
    and trunc(value_date) between current_date - 7 and current_date;
 ```
 
+Also you can use a Rule from components.xml to run an automated test. The Rule checks the number of new records and sends a notification to the specified email.
