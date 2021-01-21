@@ -2,7 +2,7 @@
 
 ### Import Test
 
-To test the Imports you can run CSV files from "files" folder.
+To test the Imports you can run CSV files from "data" folder.
 - [Import] - [File]
 - FCC (Reg) Registration Import - 1_RA-REG.csv
 - FCC (Reg) Coordinate Tower Import - 2_CO-Tower-REG.csv
