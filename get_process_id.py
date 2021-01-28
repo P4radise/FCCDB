@@ -1,11 +1,10 @@
 #!/usr/bin/python3
 
+import sys
 import json
 
-def get_process_id():
-    with open("ihub_parameters.json", "rb") as PFile:
-        ihub_data = json.loads(PFile.read().decode('utf-8'))
-
+def get_process_id(PFile):
+    ihub_data = json.loads(PFile)
     return ihub_data['processId']
 
-print(get_process_id())
+print(get_process_id(sys.argv[1]))
