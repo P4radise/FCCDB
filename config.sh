@@ -63,7 +63,7 @@ export IMPORT_CURL_RETRIES="20"
 export WAIT_SEC_BEFORE_NEXT_RETRY="300"
 export DAT_CELLS_PER_FILE="5000000"
 export LOG_URL=$(get_property $SCRIPT_DIR"/settings" "URL")
-export IHUB_PROCESS=$(get_value_by_attrib_name $SCRIPT_DIR"/get_value_by_attrib_name.py" "ihub_parameters.json")
+export IHUB_PROCESS=$(get_value_by_attrib_name $SCRIPT_DIR"/get_process_id.py" "ihub_parameters.json")
 
 export API_UN=$(get_property $SCRIPT_DIR"/settings" "USERNAME")
 export API_PW=$(get_property $SCRIPT_DIR"/settings" "PWD")
