@@ -14,7 +14,7 @@ function add_log_file(){
     local LOGLEVEL="$5"
     local LOGFILE="$6"
 
-    RESPONSE=$(curl --user "$API_UN:$API_PW" -X "POST" --header "Content-Type: multipart/form-data" --silent --header "Accept: application/json" -F file=@"$LOGFILE" "$ENDPOINT_URL/api/v3/integrations/runs/$PROCESS_ID/logs/file?log_level=$LOGLEVEL")
+    RESPONSE=$(curl --user "$API_UN:$API_PW" -X "POST" --header "Content-Type: multipart/form-data" --header "Accept: application/json" -F file=@"$LOGFILE" "$ENDPOINT_URL/api/v3/integrations/runs/$PROCESS_ID/logs/file?log_level=$LOGLEVEL")
 }
 
 function add_log(){
