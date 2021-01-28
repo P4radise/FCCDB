@@ -26,6 +26,7 @@ DL_SET_PATH="$DL_PATH/$DL_SET_NAME"
 test -e "$DL_SET_PATH" && (rm -rf "$DL_SET_PATH" || exit 10)
 mkdir -p "$DL_SET_PATH" || exit 11
 
+echo $IHUB_PROCESS
 echo "Downloading $DL_SET_NAME data..."
 add_log "$API_UN" "$API_PW" "$LOG_URL" "$IHUB_PROCESS" "Downloading $DL_SET_NAME data..." "" "Info"
 
