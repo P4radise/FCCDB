@@ -42,6 +42,15 @@ function get_import_id(){
     echo $RES
 }
 
+function get_process_id(){
+    local PY_SCRIPT="$1"
+    local IHUB_PARAMETERS="$2"
+
+    GET_DATA=$(cat $SCRIPT_DIR"/$IHUB_PARAMETERS")
+    RES=$("$PY_SCRIPT" "$GET_DATA")
+    echo $RES
+}
+
 export ENDPOINT_URL=$(get_property $SCRIPT_DIR"/settings" "URL")
 export DL_PATH="$(realpath "$SCRIPT_DIR/tmp")"
 export SDEL="|"
@@ -54,7 +63,7 @@ export IMPORT_CURL_RETRIES="20"
 export WAIT_SEC_BEFORE_NEXT_RETRY="300"
 export DAT_CELLS_PER_FILE="5000000"
 export LOG_URL=$(get_property $SCRIPT_DIR"/settings" "URL")
-export IHUB_PROCESS=$($SCRIPT_DIR"/get_process_id.py")
+export IHUB_PROCESS=$(get_process_id $SCRIPT_DIR"/get_process_id.py" "ihub_parameters.json")
 
 export API_UN=$(get_property $SCRIPT_DIR"/settings" "USERNAME")
 export API_PW=$(get_property $SCRIPT_DIR"/settings" "PWD")
